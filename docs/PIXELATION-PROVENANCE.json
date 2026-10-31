@@ -1,0 +1,10 @@
+{
+  "engine": "ink-pixelate",
+  "files": {
+    "reconstruct.js": "7c80d95285d7ada95ecfbfc03cf6bb2bd3876b018d809d0937f15311980730bc",
+    "ramps.js": "1f37616081d2cf863b1646eee4f2f4cc465db34f9f099e5152343c7c8995b8d3",
+    "pixel.js": "9d65155db8d7b1f07af0d167ede63b6012dd49069875fbb021086ccbc6bd5d86",
+    "colour.js": "91f4c1ab0373223efcd999012ef78e98c34a80b2a704e047552ecf1fb0ae1a18",
+    "palette-128.js": "97040e2fbf158a58cbafa8badda727478146f61d96945f329760263c60b3bd92"
+  }
+}

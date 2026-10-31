@@ -1,0 +1,124 @@
+{
+  "slug": "pixelate",
+  "title": "Pixelate",
+  "repository": "https://github.com/siliconjungle/ink-app-pixelate",
+  "directory": "web",
+  "entry": "index.html",
+  "desktop": {
+    "entry": "pixelate",
+    "context": "self",
+    "collaborative": false,
+    "icon": {
+      "svg": "web/icon.svg"
+    },
+    "window": {
+      "width": 1180,
+      "height": 800
+    },
+    "dropTypes": [
+      "image/png",
+      "image/jpeg",
+      "image/webp",
+      "image/avif",
+      "image/gif",
+      "image/bmp",
+      "image/svg+xml",
+      ".png",
+      ".jpg",
+      ".jpeg",
+      ".webp",
+      ".avif",
+      ".gif",
+      ".bmp",
+      ".svg"
+    ],
+    "fileTypes": [
+      "image/png",
+      "image/jpeg",
+      "image/webp",
+      "image/avif",
+      "image/gif",
+      "image/bmp",
+      "image/svg+xml"
+    ]
+  },
+  "capabilities": [
+    "world.read",
+    "world.write",
+    "desktop.open"
+  ],
+  "commandsClient": "commands.mjs",
+  "commands": [
+    {
+      "id": "pixelate",
+      "title": "Pixelate an image\u2026",
+      "description": "Open an image or GIF with sequence-consistent pixelation.",
+      "inputs": [
+        {
+          "name": "file",
+          "label": "Artwork",
+          "type": "file",
+          "required": true,
+          "accepts": [
+            "image/png",
+            "image/jpeg",
+            "image/webp",
+            "image/avif",
+            "image/gif",
+            "image/bmp",
+            "image/svg+xml"
+          ]
+        }
+      ],
+      "handler": {
+        "type": "open"
+      }
+    },
+    {
+      "id": "presets",
+      "title": "Browse pixelation presets",
+      "description": "Reuse shared dimensions, reconstruction and palette settings.",
+      "handler": {
+        "type": "open"
+      }
+    },
+    {
+      "id": "saved",
+      "title": "Find pixelated artwork",
+      "description": "Search saved pixelation exports and their source links.",
+      "inputs": [
+        {
+          "name": "q",
+          "label": "Search",
+          "type": "text"
+        }
+      ],
+      "handler": {
+        "type": "query",
+        "query": {
+          "kind": "pixelate-render",
+          "scope": "self"
+        }
+      },
+      "result": {
+        "items": "objects",
+        "title": "title"
+      },
+      "outputs": [
+        {
+          "label": "Saved renders",
+          "path": "objects",
+          "type": "json"
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "title": "Show saved pixelations",
+      "description": "Browse saved images, GIFs and sprite packs.",
+      "handler": {
+        "type": "open"
+      }
+    }
+  ]
+}
