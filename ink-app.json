@@ -40,7 +40,18 @@
       "image/gif",
       "image/bmp",
       "image/svg+xml"
-    ]
+    ],
+    "preview": {
+      "fileTypes": [
+        "image/png",
+        "image/jpeg",
+        "image/webp",
+        "image/avif",
+        "image/gif",
+        "image/bmp",
+        "image/svg+xml"
+      ]
+    }
   },
   "capabilities": [
     "world.read",
@@ -51,7 +62,7 @@
   "commands": [
     {
       "id": "pixelate",
-      "title": "Pixelate an image\u2026",
+      "title": "Pixelate an image…",
       "description": "Open an image or GIF with sequence-consistent pixelation.",
       "inputs": [
         {
